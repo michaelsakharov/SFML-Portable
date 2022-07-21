@@ -72,6 +72,7 @@ namespace SFML.Window
         public TextEventArgs(TextEvent e)
         {
             Unicode = Char.ConvertFromUtf32((int)e.Unicode);
+            this.UnicodeInt = (int)e.Unicode;
         }
 
         ////////////////////////////////////////////////////////////
@@ -88,6 +89,8 @@ namespace SFML.Window
 
         /// <summary>UTF-16 value of the character</summary>
         public string Unicode;
+        /// <summary>Integer value of the character</summary>
+        public int UnicodeInt;
     }
 
     ////////////////////////////////////////////////////////////
